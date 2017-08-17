@@ -73,9 +73,9 @@ public class FormatteableRow<T: Any, Cell: CellType where Cell: BaseCell, Cell: 
         displayValueFor = { [unowned self] value in
             guard let v = value else { return nil }
             guard let formatter = self.formatter else { return String(v) }
-            if (self.cell.textInput as? UIView)?.isFirstResponder() == true {
-                return self.useFormatterDuringInput ? formatter.editingStringForObjectValue(v as! AnyObject) : String(v)
-            }
+//            if (self.cell.textInput as? UIView)?.isFirstResponder() == true {
+//                return self.useFormatterDuringInput ? formatter.editingStringForObjectValue(v as! AnyObject) : String(v)
+//            }
             return formatter.stringForObjectValue(v as! AnyObject)
         }
     }
